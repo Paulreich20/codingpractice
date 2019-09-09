@@ -1,0 +1,20 @@
+public class BST{
+
+}
+
+def Median(arr):
+    return arr.length() // 2
+
+def makeBST(arr, BST):
+    if arr.length == 0:
+        return null
+    if arr.length == 1:
+        BST.insert(arr[0])
+
+    pivot = arr[Median(arr)]
+    BST.insert(pivot)
+    makeBST(arr[0:Median(arr)-1])
+    makeBST(arr[Median(arr)+1])
+    return null'\;
+
+makeBST(givenArray, BST)
